@@ -1,0 +1,703 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.setup {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/pexels-thisisengineering-3862601.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    padding: 0 100px;
+    backdrop-filter: blur(50px);
+    position: fixed;
+    box-shadow:  0 0 25px #4c4c4c;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    width: 5%;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30rem;
+    width: 41%;
+    height: 5vh;
+    background: transparent;
+    box-shadow: 0 0 20px #4c4c4c;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav .link:hover > :not(:hover) {
+    filter: blur(5px);
+}
+
+nav .link a {
+    color: #000;
+    text-decoration: none;
+    transition: all .1s ease;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .link a:hover {
+    padding-left: 20px;
+}
+
+nav .btn-login {
+    width: 10%;
+    height: 5vh;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px #4c4c4c;
+}
+
+nav .btn-login .login {
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #000;
+    transition: all .5s ease;
+    color: #fff;
+}
+
+nav .btn-login .login:hover {
+    padding-left: 20px;
+}
+
+.intro {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.intro #typing-effect h1{
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 30rem;
+}
+
+.intro .image {
+    width: 30%;
+    height: 50vh;
+    border-radius: 20px;
+    background: url('../img/person4.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.intro .main {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.intro .text {
+    display: grid;
+    gap: 20px;
+}
+
+.intro .text h1 {
+    font-size: 3.5rem;
+    color: #000;
+    text-shadow: 0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 80px cyan;
+    font-weight: 900;
+    line-height: 3.5rem;
+}
+
+.intro .text p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.intro .text .button {
+    display: flex;
+    gap: 100px;
+    margin-top: 10px;
+}
+
+.intro .text .button button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background: yellow;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 30px #2c2c2c;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s ease;
+    z-index: 1;
+}
+
+.intro .text .button button:hover {
+    color: #000;
+}
+
+.intro .text .button button::after {
+    content: '';
+    position: absolute;
+    width: 5.1rem;
+    height: 5.1rem;
+    left: 0;
+    top: 0;
+    border-radius: 30rem;
+    background: #000;
+    transition: all 1s ease;
+    z-index: -1;
+}
+
+.intro .text .button button:hover::after {
+    left: 7.5rem;
+}
+
+.intro .text .button button::before {
+    content: '';
+    position: absolute;
+    width: 5.1rem;
+    height: 5.1rem;
+    bottom: 0;
+    right: 0;
+    border-radius: 30rem;
+    background: #000;
+    transition: all 1s ease;
+    z-index: -1;
+}
+
+.intro .text .button button:hover::before {
+    right: 7.5rem;
+}
+
+.setup1 {
+    width: 100%;
+    height: 100vh;
+    background: #fff; 
+}
+
+.setup1 .forme {
+    width: 20%;
+    height: 20vh;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+}
+
+.setup1 .forme h1 {
+    color: #4c4c4c;
+}
+
+.setup1 .forme p {
+    color: #000;
+}
+
+.setup1 .all {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+}
+
+.setup1 .all .not-all {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.all .grid {
+    display: grid;
+    gap: 20px;
+}
+
+.all .grid .grid-text {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.all .grid .grid-text .down {
+    position: relative;
+    right: 8.1rem;
+}
+
+.all .grid .grid-text .down1 {
+    position: relative;
+    right: 2rem;
+}
+
+.all .grid .grid-text .down2 {
+    position: relative;
+    right: 1rem;
+}
+
+.all .grid .grid-text .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.all .grid .grid-text h1{
+    font-size: 1rem;
+}
+
+.all .flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.all .grid .vox {
+    width: 600px;
+    height: 10px;
+    background: #cecece;
+    border-radius: 30rem;
+}
+
+.all .flex .box {
+    width: 220px;
+    height: 220px;
+    background: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .5s ease;
+    cursor: pointer;
+    backdrop-filter: blur(15px);
+}
+
+.all .flex .box:hover {
+    scale: 1.05;
+}
+
+.all .flex .box .box-text {
+    font-size: 6rem;
+}
+
+.all .flex .box .box-text h1 {
+    font-size: 1.1rem;
+}
+
+.all .flex .fox {
+    background: #000;
+    color: #fff;
+}
+
+.all .grid .item1::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 10px;
+    background: rgb(237, 237, 11);
+    border-radius: 30rem;
+}
+.all .grid .item2::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 10px;
+    background: rgb(237, 237, 11);
+    border-radius: 30rem;
+}
+.all .grid .item3::after {
+    content: '';
+    position: absolute;
+    width: 570px;
+    height: 10px;
+    background: rgb(237, 237, 11);
+    border-radius: 30rem;
+}
+.all .grid .item4::after {
+    content: '';
+    position: absolute;
+    width: 550px;
+    height: 10px;
+    background: rgb(237, 237, 11);
+    border-radius: 30rem;
+}
+.all .grid .item5::after {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 10px;
+    background: rgb(237, 237, 11);
+    border-radius: 30rem;
+}
+
+.all .grid .level {
+    width: 40px;
+    height: 20px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.all .grid .level h1 {
+    font-size: 13px;
+}
+
+.setup2 {
+    width: 100%;
+    height: 150vh;
+    background: #fff;
+}
+
+.wrapper {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    height: 100px;
+    margin-top: 3rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0));
+}
+
+@keyframes scrollleft {
+    to {
+        left: -200px;
+    }
+}
+
+.wrapper .hello {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    position: absolute;
+    left:  max(calc(200px * 8), 100%);
+    animation-name: scrollleft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper .hello img {
+    width: 50%;
+    height: 100%;
+}
+
+.own1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+.own2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+.own3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+.own4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+.own5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+.own6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+.own7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+.own8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.his-text {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.his-text h1 {
+    color: #000;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4rem;
+}
+
+.his-text p {
+    font-size: 1.1rem;
+    color: #656565;
+}
+
+.setup2 .upgrade {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.setup2 .upgrade .more {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: transparent;
+}
+
+.setup2 .upgrade .station {
+    width: 50%;
+    background: url('../img/pngwing.com\ \(33\).png');
+    background-position: center;
+    background-size: cover;
+}
+
+.setup2 .upgrade .info {
+    width: 50%;
+    background: transparent;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.setup2 .upgrade .info .three {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.setup2 .upgrade .info .three:hover {
+    scale: 1.05;
+}
+
+.setup2 .upgrade .info .three img {
+    width: 100%;
+    height: 80%;
+}
+
+.setup3 {
+    width: 100%;
+    background: #fff;
+}
+
+.setup3 .women {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.setup3 .women .face {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup3 .women .face .in {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.setup3 .women .face .in .image {
+    transform: translateX(0);
+    width: 15%;
+    margin: auto;
+}
+
+.setup3 .women .face .in .image img {
+    border-radius: 9999px;
+    width: 100%;
+}
+
+.setup3 .women .face .in h2 {
+    font-size: 1.2rem;
+    color: #000;
+    line-height: 2rem;
+}
+
+.setup3 .women .face .in .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup3 .women .face .in .link a {
+    color: #29aeac;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.setup3 .women .face .in .link h2 {
+    color: #000;
+}
+
+.footer {
+    width: 100%;
+    background: #111111;
+}
+
+.footer .bold {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13rem;
+}
+
+.footer .menio {
+    width: 30%;
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    margin-top: 5rem;
+}
+
+.footer .menio h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer .menio p {
+    color: #b0b0b0;
+}
+
+.footer .menio .iconic {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    width: 40%;
+}
+
+.footer .menio .iconic ion-icon {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footer .menio .iconic ion-icon:hover {
+    scale: 1.3;
+} 
+
+.bold .second {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.second .venom {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.venom h1 {
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.venom a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.venom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .intro .main {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro .text h1{
+        font-size: 3rem;
+    }
+    .intro .text p{
+        font-size: 12px;
+    }
+    .setup2 .upgrade .info {
+        grid-template-columns: 1fr;
+    }
+    .setup1 .all .not-all {
+        display: grid;
+    }
+    .setup1 .all {
+        margin-top: 40rem;
+    }
+}
