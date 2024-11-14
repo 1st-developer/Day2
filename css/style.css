@@ -30,6 +30,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 2000;
 }
 
 nav .logo {
@@ -73,7 +74,7 @@ nav .link a:hover {
     padding-left: 20px;
 }
 
-nav .btn-login {
+nav .btn-btn {
     width: 10%;
     height: 5vh;
     border-radius: 10px;
@@ -85,7 +86,7 @@ nav .btn-login {
     box-shadow: 0 0 20px #4c4c4c;
 }
 
-nav .btn-login .login {
+nav .btn-btn .login {
     width: 100%;
     height: 100%;
     border: none;
@@ -97,7 +98,7 @@ nav .btn-login .login {
     color: #fff;
 }
 
-nav .btn-login .login:hover {
+nav .btn-btn .login:hover {
     padding-left: 20px;
 }
 
@@ -113,7 +114,7 @@ nav .btn-login .login:hover {
     font-size: 2rem;
     color: #fff;
     position: absolute;
-    top: 30rem;
+    top: 31.5rem;
 }
 
 .intro .image {
@@ -678,6 +679,67 @@ nav .btn-login .login:hover {
     text-decoration: underline;
 }
 
+.bull {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    top: -21.5rem;
+    color: #000;
+    display: none;
+    z-index: 1;
+    left: 13rem;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+.setup .google {
+    position: absolute;
+    z-index: 1000;
+    width: 300px;
+    height: 100vh;
+    background: #000;
+    box-shadow: 0 0 20px #000;
+    border-top-right-radius: 20px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.setup .google.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.setup .google .links {
+    display: grid;
+    gap: 30px;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup .google .links a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: all .2s ease;
+    z-index: 1000;
+}
+
+.setup .google .links a:hover {
+    text-decoration: underline;
+    z-index: 1000;
+}
+
+
 @media (max-width: 1024px) {
     .intro .main {
         width: 100%;
@@ -699,5 +761,13 @@ nav .btn-login .login:hover {
     }
     .setup1 .all {
         margin-top: 40rem;
+    }
+    .setup nav .link {
+        opacity: 0;
+    }
+    body .bull {
+        opacity: 1;
+        top: -22.2rem;
+        display: flex;
     }
 }
