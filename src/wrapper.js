@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showwrapper() {
         if (wrapper.classList.contains('show')) {
-            wrapper.classList.remove('show'); // إخفاء العنصر إذا كان ظاهرًا
+            wrapper.classList.remove('show');
         } else {
-            wrapper.classList.add('show');    // إظهار العنصر إذا كان مخفيًا
+            wrapper.classList.add('show');  
         }
     }
 
